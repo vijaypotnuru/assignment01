@@ -18,24 +18,24 @@ export default async function ProductsPage() {
 
   // Generate JSON-LD schema for SEO
   const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'ItemList',
-    'itemListElement': products.slice(0, 10).map((product, index) => ({
-      '@type': 'ListItem',
-      'position': index + 1,
-      'item': {
-        '@type': 'Product',
-        'name': product.title,
-        'description': product.description,
-        'image': product.image,
-        'offers': {
-          '@type': 'Offer',
-          'price': product.price,
-          'priceCurrency': 'USD',
-          'availability': 'https://schema.org/InStock'
-        }
-      }
-    }))
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    itemListElement: products.slice(0, 10).map((product, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      item: {
+        "@type": "Product",
+        name: product.title,
+        description: product.description,
+        image: product.image,
+        offers: {
+          "@type": "Offer",
+          price: product.price,
+          priceCurrency: "USD",
+          availability: "https://schema.org/InStock",
+        },
+      },
+    })),
   };
 
   return (
@@ -45,7 +45,7 @@ export default async function ProductsPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      
+
       <main className={styles.main}>
         <Header />
 

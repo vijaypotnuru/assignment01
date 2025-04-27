@@ -1,22 +1,20 @@
 .productListContainer {
-  flex: 1;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .productListHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 0;
-  border-top: 1px solid var(--border-color);
-  border-bottom: 1px solid var(--border-color);
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .productCount {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2.2em;
-  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .filterControls {
@@ -26,18 +24,19 @@
 }
 
 .showFilterButton {
-  display: none;
+  display: flex;
   align-items: center;
   gap: 8px;
   background: none;
   border: none;
   cursor: pointer;
-  color: var(--text-light);
+  font-weight: 700;
   font-size: 16px;
+  letter-spacing: 5%;
 }
 
 .rotateRight {
-  transform: rotate(90deg);
+  transform: rotate(-90deg);
 }
 
 .sortContainer {
@@ -45,57 +44,45 @@
   align-items: center;
   gap: 8px;
   cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 5%;
 }
 
 .sortLabel {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2.2em;
   text-transform: uppercase;
 }
 
 .productGrid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
 }
 
-/* Responsive styles */
-@media (max-width: 1200px) {
-  .productGrid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 992px) {
-  .showFilterButton {
-    display: flex;
-  }
+.productItem {
+  width: 100%;
 }
 
 @media (max-width: 768px) {
-  .productGrid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+  .productListHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
   }
 
-  .productListHeader {
-    padding: 12px 0;
-    margin-bottom: 24px;
+  .filterControls {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .productGrid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
   }
 }
 
 @media (max-width: 576px) {
   .productGrid {
     grid-template-columns: 1fr;
-  }
-
-  .filterControls {
-    gap: 12px;
-  }
-
-  .productCount,
-  .sortLabel {
-    font-size: 16px;
   }
 }

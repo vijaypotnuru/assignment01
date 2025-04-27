@@ -1,90 +1,38 @@
-import Link from "next/link";
+"use client";
+
+import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./Header.module.css";
 
 const Header = () => {
   return (
-    <header className={styles.header}>
+    <div className={styles.headerContainer}>
       <div className={styles.blackStrip}>
-        <div className={styles.stripContent}>
-          <div className={styles.stripItem}>
-            <Image
-              src="/images/element.svg"
-              alt="Icon"
-              width={24}
-              height={24}
-            />
-            <span>Lorem ipsum dolor</span>
-          </div>
-          <div className={styles.stripItem}>
-            <Image
-              src="/images/element.svg"
-              alt="Icon"
-              width={24}
-              height={24}
-            />
-            <span>Lorem ipsum dolor</span>
-          </div>
-          <div className={styles.stripItem}>
-            <Image
-              src="/images/element.svg"
-              alt="Icon"
-              width={24}
-              height={24}
-            />
-            <span>Lorem ipsum dolor</span>
-          </div>
+        <div className={styles.stripItem}>
+          <Image src="/images/element.svg" alt="Icon" width={20} height={20} />
+          <span>Lorem ipsum dolor</span>
+        </div>
+        <div className={styles.stripItem}>
+          <Image src="/images/element.svg" alt="Icon" width={20} height={20} />
+          <span>Lorem ipsum dolor</span>
+        </div>
+        <div className={styles.stripItem}>
+          <Image src="/images/element.svg" alt="Icon" width={20} height={20} />
+          <span>Lorem ipsum dolor</span>
         </div>
       </div>
 
-      <div className={styles.mainHeader}>
-        <div className={styles.logo}>
-          <Link href="/">
-            <Image src="/images/logo.svg" alt="LOGO" width={120} height={40} />
-          </Link>
+      <div className={styles.header}>
+        <div className={styles.logoContainer}>
+          <Image src="/images/logo.svg" alt="Logo" width={40} height={40} />
         </div>
 
-        <nav className={styles.navigation}>
-          <ul className={styles.navList}>
-            <li className={styles.navItem}>
-              <Link href="/" className={styles.navLink}>
-                SHOP
-              </Link>
-            </li>
-            <li className={styles.navItem}>
-              <Link href="/skills" className={styles.navLink}>
-                SKILLS
-              </Link>
-            </li>
-            <li className={styles.navItem}>
-              <Link href="/stories" className={styles.navLink}>
-                STORIES
-              </Link>
-            </li>
-            <li className={styles.navItem}>
-              <Link href="/about" className={styles.navLink}>
-                ABOUT
-              </Link>
-            </li>
-            <li className={styles.navItem}>
-              <Link href="/contact" className={styles.navLink}>
-                CONTACT US
-              </Link>
-            </li>
-          </ul>
-        </nav>
+        <div className={styles.logoText}>
+          <Link href="/">LOGO</Link>
+        </div>
 
-        <div className={styles.actions}>
-          <div className={styles.language}>
-            <span>ENG</span>
-            <Image
-              src="/images/arrow-down.svg"
-              alt="Arrow down"
-              width={16}
-              height={16}
-            />
-          </div>
-
+        <div className={styles.headerRight}>
           <div className={styles.icons}>
             <button className={styles.iconButton} aria-label="Search">
               <Image
@@ -97,7 +45,7 @@ const Header = () => {
             <button className={styles.iconButton} aria-label="Favorites">
               <Image
                 src="/images/heart.svg"
-                alt="Heart"
+                alt="Favorites"
                 width={24}
                 height={24}
               />
@@ -118,10 +66,41 @@ const Header = () => {
                 height={24}
               />
             </button>
+
+            <div className={styles.language}>
+              <span>ENG</span>
+              <Image
+                src="/images/arrow-down.svg"
+                alt="Language dropdown"
+                width={12}
+                height={12}
+                className={styles.arrowDown}
+              />
+            </div>
           </div>
         </div>
       </div>
-    </header>
+
+      <nav className={styles.navigation}>
+        <ul>
+          <li className={styles.active}>
+            <Link href="/shop">SHOP</Link>
+          </li>
+          <li>
+            <Link href="/skills">SKILLS</Link>
+          </li>
+          <li>
+            <Link href="/stories">STORIES</Link>
+          </li>
+          <li>
+            <Link href="/about">ABOUT</Link>
+          </li>
+          <li>
+            <Link href="/contact">CONTACT US</Link>
+          </li>
+        </ul>
+      </nav>
+    </div>
   );
 };
 

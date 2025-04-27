@@ -1,0 +1,191 @@
+.footer {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  padding: 60px 40px 20px;
+}
+
+.footerContent {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+.footerSection {
+  margin-bottom: 30px;
+}
+
+.footerTitle {
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.footerLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footerLinks a {
+  font-size: 18px;
+  transition: opacity 0.2s;
+}
+
+.footerLinks a:hover {
+  opacity: 0.8;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 12px;
+}
+
+.socialIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1.2px solid #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+.socialIcon:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.contactInfo {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.currency {
+  margin-bottom: 10px;
+}
+
+.currencySelector {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.flag {
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.currencyText {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.currencyNote {
+  font-size: 12px;
+  opacity: 0.8;
+  margin-top: 10px;
+  max-width: 300px;
+}
+
+.paymentMethods {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.paymentIcon {
+  width: 48px;
+  height: 32px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.newsletterText {
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.subscribeForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.emailInput {
+  padding: 14px 24px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 0;
+  font-size: 16px;
+  outline: none;
+  width: 100%;
+}
+
+.subscribeButton {
+  background-color: #000000;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  padding: 14px 24px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 18px;
+  cursor: pointer;
+  opacity: 0.3;
+  transition: opacity 0.2s;
+}
+
+.subscribeButton:hover {
+  opacity: 1;
+}
+
+.footerDivider {
+  height: 1px;
+  background-color: #ffffff;
+  margin: 40px auto;
+  max-width: var(--container-width);
+}
+
+.footerBottom {
+  text-align: center;
+}
+
+.copyright {
+  font-size: 14px;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .footerContent {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .footerContent {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 20px 20px;
+  }
+
+  .footerContent {
+    grid-template-columns: 1fr;
+  }
+
+  .subscribeForm {
+    max-width: 100%;
+  }
+}

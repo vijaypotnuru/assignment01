@@ -1,0 +1,173 @@
+.header {
+  width: 100%;
+}
+
+.blackStrip {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  width: 100%;
+  padding: 8px 0;
+}
+
+.stripContent {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 274px;
+}
+
+.stripItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.mainHeader {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 36px;
+  letter-spacing: 1px;
+}
+
+.navigation {
+  display: flex;
+}
+
+.navList {
+  display: flex;
+  gap: 64px;
+  list-style: none;
+}
+
+.navItem {
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 5%;
+}
+
+.navLink {
+  text-decoration: none;
+  color: var(--text-color);
+  position: relative;
+}
+
+.navLink:hover::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--primary-color);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.language {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.icons {
+  display: flex;
+  gap: 24px;
+}
+
+.iconButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Mobile menu button */
+.menuButton {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 1440px) {
+  .stripContent {
+    padding: 0 40px;
+  }
+
+  .mainHeader {
+    padding: 20px 40px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .navList {
+    gap: 32px;
+  }
+}
+
+@media (max-width: 992px) {
+  .navigation {
+    display: none;
+  }
+
+  .menuButton {
+    display: block;
+  }
+
+  .actions {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .stripContent {
+    padding: 0 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .mainHeader {
+    padding: 16px 20px;
+  }
+
+  .language {
+    display: none;
+  }
+
+  .icons {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .stripContent {
+    padding: 0 10px;
+  }
+
+  .mainHeader {
+    padding: 12px 10px;
+  }
+}

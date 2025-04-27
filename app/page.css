@@ -1,7 +1,8 @@
 main {
   width: 100%;
-  /* max-width: 1440px; */
+  max-width: 1440px;
   padding: 30px 60px;
+  margin: 0 auto;
 }
 
 header {
@@ -9,17 +10,60 @@ header {
   flex-direction: column;
   align-items: center;
   row-gap: 30px;
+  margin-bottom: 40px;
+  position: relative;
 }
 
 header h1 {
   text-align: center;
   font-size: 60px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #000000 0%, #333333 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 10px;
 }
 
 header p {
   text-align: center;
-  max-width: 50%;
+  max-width: 700px;
   font-size: 22px;
+  line-height: 1.6;
+  color: #555;
+}
+
+
+
+/* Animation for products loading */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.product-section {
+  animation: fadeIn 0.6s ease-out;
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 20px 30px;
+  }
+
+  header h1 {
+    font-size: 40px;
+  }
+
+  header p {
+    max-width: 100%;
+    font-size: 18px;
+  }
 }
 
 @media (max-width: 540px) {
@@ -28,12 +72,17 @@ header p {
   }
 
   header h1 {
-    font-size: 24px;
-    font-weight: 400;
+    font-size: 30px;
+    font-weight: 600;
   }
 
   header p {
     max-width: 100%;
     font-size: 16px;
+  }
+
+  header::after {
+    width: 60px;
+    height: 3px;
   }
 }

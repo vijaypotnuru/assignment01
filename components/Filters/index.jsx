@@ -33,7 +33,7 @@ export const Filters = () => {
     }
 
     return (
-        <aside className="flex-col row-gap-16">
+        <aside className="flex-col row-gap-16 ">
             <p className="font-semibold text-md"><input type="checkbox" checked={filterList?.length > 0} onChange={(e) => filterList?.length > 0 ? setFilterList([]) : null} />CUSTOMIZABLE</p>
             <div className="flex-col row-gap-10">
                 <h3 className="font-semibold text-md">IDEAL FOR</h3>

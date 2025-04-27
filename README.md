@@ -1,105 +1,11 @@
-# Appscrip-task-candidate
+# Assignment
+### Steps to run in local
+1. clone the repo using `https://github.com/deekshithmd/appscrip-task-deekshith-md.git`;
+2. navigate to appscrip-task-deekshith-md directory
+3. run `npm install` to install dependencies
+4. Then run `npm run dev` to run local server
+5. Application will run at `localhost:3000`
 
-This is an e-commerce product listing page built with Next.js, React, and TypeScript.
-
-## Features
-
-- Server-side rendering (SSR) for optimal performance and SEO
-- Responsive design for mobile, tablet, and desktop
-- Product filtering system
-- Clean code structure with reusable components
-- SEO optimization with meta tags and schema markup
-- API integration with FakeStore API
-- Client-side state management
-
-## Tech Stack
-
-- **Framework**: Next.js 15
-- **Language**: TypeScript
-- **Styling**: Plain CSS (no framework as required)
-- **Deployment**: Netlify
-
-## SEO Optimizations
-
-- Proper page titles and descriptions
-- H1 and H2 tags used appropriately
-- Schema.org markup for product listings
-- Alt text for all images
-- SEO-friendly image naming
-- Semantic HTML structure
-
-## Project Structure
-
-- `/src/app` - Next.js app router
-- `/src/app/components` - Reusable UI components
-- `/src/app/products` - Product listing page with SSR
-- `/src/types` - TypeScript type definitions
-- `/src/utils` - Utility functions and API handling
-- `/src/styles` - Global CSS styles
-- `/public` - Static assets like images
-
-## How to Run Locally
-
-1. Clone the repository
-
-```bash
-git clone https://github.com/yourusername/Appscrip-task-candidate.git
-cd Appscrip-task-candidate
-```
-
-2. Install dependencies
-
-```bash
-npm install
-```
-
-3. Run the development server
-
-```bash
-npm run dev
-```
-
-4. Open [http://localhost:3000](http://localhost:3000) in your browser
-
-## Build and Deployment
-
-1. Build the project
-
-```bash
-npm run build
-```
-
-2. Preview the production build locally
-
-```bash
-npm start
-```
-
-3. The project is set up for automatic deployment to Netlify
-
-## Code Structure and Naming Conventions
-
-- **Components**: Pascal case (e.g., `ProductCard.tsx`)
-- **Utilities**: Camel case (e.g., `fetchProducts.ts`)
-- **CSS Modules**: Component name + `.module.css` (e.g., `ProductCard.module.css`)
-- **TypeScript Types**: Interface-based with descriptive names
-
-## Performance Optimizations
-
-- Next.js Image component for optimized images
-- Minimized DOM size with clean component structure
-- Server-side rendering for faster initial load
-- CSS modules for scoped styles
-- Lazy loading of images
-
-## Future Improvements
-
-- Add authentication
-- Implement product detail page
-- Add shopping cart functionality
-- Add search functionality
-- Implement more advanced filtering options
-
-## License
-
-This project is part of an assignment and not licensed for public use.
+## Filter Functionalities
+1. On right side filters provided to filter products based on popularity, recommended, newest first, price low to high and price high to low.
+2. On left side filters provided to filter based on user's interest, if clicked on `All` it will select all filters of that particular section, if clicked on `Unselect all` it will deselect all filters of that particular section.

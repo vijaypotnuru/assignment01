@@ -1,0 +1,39 @@
+main {
+  width: 100%;
+  max-width: 1440px;
+  padding: 30px 60px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 30px;
+}
+
+header h1 {
+  text-align: center;
+  font-size: 60px;
+}
+
+header p {
+  text-align: center;
+  max-width: 50%;
+  font-size: 22px;
+}
+
+@media (max-width: 540px) {
+  main {
+    padding: 20px;
+  }
+
+  header h1 {
+    font-size: 24px;
+    font-weight: 400;
+  }
+
+  header p {
+    max-width: 100%;
+    font-size: 16px;
+  }
+}
